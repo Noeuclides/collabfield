@@ -4,10 +4,13 @@
     <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Collabfield</span>
   </a>
   <div class="flex justify-between">
+    <div id="user-name" class='py-2 px-2 font-medium text-white rounded hover:text-blue-700 md:dark:hover:bg-transparent'>
+      <%= current_user.name %>
+    </div>
     <!-- Secondary Navbar items -->
     <div class="hidden md:flex items-center space-x-3 ">
-      <a href="" class="py-2 px-2 font-medium text-white rounded hover:text-blue-700 md:dark:hover:bg-transparent">Edit</a>
-      <a href="" class="py-2 px-2 font-medium text-white rounded hover:text-blue-700 md:dark:hover:bg-transparent">Logout</a>
+      <%= link_to 'Edit Profile', edit_user_registration_path, class: 'py-2 px-2 font-medium text-white rounded hover:text-blue-700 md:dark:hover:bg-transparent' %>
+      <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'py-2 px-2 font-medium text-white rounded hover:text-blue-700 md:dark:hover:bg-transparent' %>
     </div>
 
     <!-- Mobile menu button -->
@@ -33,10 +36,10 @@
 <div class="hidden mobile-menu">
   <ul class="">
     <li class="active">
-      <a href="#" class="py-2 px-2 font-medium text-white rounded hover:text-blue-700 md:dark:hover:bg-transparent">Edit</a>
+      <%= link_to 'Edit Profile', edit_user_registration_path, class: 'py-2 px-2 font-medium text-white rounded hover:text-blue-700 md:dark:hover:bg-transparent' %>
     </li>
     <li>
-      <a href="#" class="py-2 px-2 font-medium text-white rounded hover:text-blue-700 md:dark:hover:bg-transparent">Logout</a>
+      <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'py-2 px-2 font-medium text-white rounded hover:text-blue-700 md:dark:hover:bg-transparent' %>
     </li>
   </ul>
 </div>

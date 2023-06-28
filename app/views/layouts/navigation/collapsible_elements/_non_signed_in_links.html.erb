@@ -6,8 +6,8 @@
   <div class="flex justify-between">
     <!-- Secondary Navbar items -->
     <div class="hidden md:flex items-center space-x-3 ">
-      <a href="" class="py-2 px-2 font-medium text-white rounded hover:text-blue-700 md:dark:hover:bg-transparent">Log In</a>
-      <a href="" class="py-2 px-2 font-medium text-white rounded hover:text-blue-700 md:dark:hover:bg-transparent">Sign Up</a>
+      <%= link_to 'Log In', login_path, class: 'py-2 px-2 font-medium text-white rounded hover:text-blue-700 md:dark:hover:bg-transparent' %>
+      <%= link_to 'Sign Up', signup_path, class: 'py-2 px-2 font-medium text-white rounded hover:text-blue-700 md:dark:hover:bg-transparent' %>
     </div>
 
     <!-- Mobile menu button -->
@@ -33,10 +33,10 @@
 <div class="hidden mobile-menu">
   <ul class="">
     <li class="active">
-      <a href="#" class="py-2 px-2 font-medium text-white rounded hover:text-blue-700 md:dark:hover:bg-transparent">Log In</a>
+      <%= link_to 'Log In', login_path, class: 'py-2 px-2 font-medium text-white rounded hover:text-blue-700 md:dark:hover:bg-transparent' %>
     </li>
     <li>
-      <a href="#" class="py-2 px-2 font-medium text-white rounded hover:text-blue-700 md:dark:hover:bg-transparent">Sign Up</a>
+      <%= link_to 'Sign Up', signup_path, class: 'py-2 px-2 font-medium text-white rounded hover:text-blue-700 md:dark:hover:bg-transparent' %>
     </li>
   </ul>
 </div>

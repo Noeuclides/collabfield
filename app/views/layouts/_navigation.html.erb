@@ -1,11 +1,5 @@
 <nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-    <%= render 'layouts/navigation/header' %>
-  </div>
-  <!-- mobile menu -->
-  <div class="hidden mobile-menu">
-    <%= render 'layouts/navigation/collapsible_elements' %>
-  </div>
+  <%= render links_partial_path %>
   <script>
       const btn = document.querySelector("button.mobile-menu-button");
       const menu = document.querySelector(".mobile-menu");

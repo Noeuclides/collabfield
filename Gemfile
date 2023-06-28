@@ -69,9 +69,15 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'rails-controller-testing'
+  gem 'headless'
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'database_cleaner'
 end
 
 gem "slim-rails"

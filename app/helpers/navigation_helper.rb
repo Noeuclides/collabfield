@@ -1,9 +1,6 @@
 module NavigationHelper
-  def links_partial_path(location)
-    if user_signed_in?
-      "layouts/navigation/#{location}/signed_in_links"
-    else
-      "layouts/navigation/#{location}/non_signed_in_links"
-    end
+  def links_partial_path
+    dir = "layouts/navigation/collapsible_elements"
+    user_signed_in? ? "#{dir}/signed_in_links" : "#{dir}/non_signed_in_links"
   end
 end
